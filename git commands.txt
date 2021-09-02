@@ -1,16 +1,161 @@
- git --version
-  checking version
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ git --version
+git version 2.29.2.windows.2
 
-git config --global user.name
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ git config --global user.name
 sachin
 
-
-git config --global user.email
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ git config --global user.email
 sachinpatelsdl@gmail.com
 
- mkdir GitPractice
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ git log
+fatal: not a git repository (or any of the parent directories): .git
 
- cd gitPractice
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ mkdir GitPractice
 
- git init
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ cd
+Display all 92 possibilities? (y or n)
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ cd
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~
+$ cd gitPractice
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice
+$ git init
 Initialized empty Git repository in C:/Users/Hp/GitPractice/.git/
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ v^C
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ ^C
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ ^C
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ ^C
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git add .
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git commit -m "initial commit"
+[master (root-commit) 422f401] initial commit
+ 1 file changed, 16 insertions(+)
+ create mode 100644 git commands.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git log
+commit 422f401cc105be6ffd786946fc7e9ffac27d91e1 (HEAD -> master)
+Author: sachin <sachinpatelsdl@gmail.com>
+Date:   Thu Sep 2 13:32:49 2021 +0530
+
+    initial commit
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        branches.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git add branches.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git commit -m "second commit"
+[master f31f526] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branches.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git log
+commit f31f5269b6576735e5a88aaff4aa4b094d5135ac (HEAD -> master)
+Author: sachin <sachinpatelsdl@gmail.com>
+Date:   Thu Sep 2 15:47:09 2021 +0530
+
+    second commit
+
+commit 422f401cc105be6ffd786946fc7e9ffac27d91e1
+Author: sachin <sachinpatelsdl@gmail.com>
+Date:   Thu Sep 2 13:32:49 2021 +0530
+
+    initial commit
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git branch dev
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (dev)
+$ git checkout -b sachin/branch
+Switched to a new branch 'sachin/branch'
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (sachin/branch)
+$ git status
+On branch sachin/branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sachinBranch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (sachin/branch)
+$ git add .
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (sachin/branch)
+$ git commit -m "created Sachin branch"
+[sachin/branch e512fc1] created Sachin branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sachinBranch.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (sachin/branch)
+$ git log
+commit e512fc1b73300a55e3e4be239389058e050c43d1 (HEAD -> sachin/branch)
+Author: sachin <sachinpatelsdl@gmail.com>
+Date:   Thu Sep 2 15:53:54 2021 +0530
+
+    created Sachin branch
+
+commit f31f5269b6576735e5a88aaff4aa4b094d5135ac (master, dev)
+Author: sachin <sachinpatelsdl@gmail.com>
+Date:   Thu Sep 2 15:47:09 2021 +0530
+
+    second commit
+
+commit 422f401cc105be6ffd786946fc7e9ffac27d91e1
+Author: sachin <sachinpatelsdl@gmail.com>
+Date:   Thu Sep 2 13:32:49 2021 +0530
+
+    initial commit
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (sachin/branch)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (dev)
+$ git merge sachin/branch
+Updating f31f526..e512fc1
+Fast-forward
+ sachinBranch.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sachinBranch.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (dev)
+$
