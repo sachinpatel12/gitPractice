@@ -1,5 +1,6 @@
-Hp@LAPTOP-8U87UVS8 MINGW64 ~
-$ git --version
+
+//////////////////////////////////////////////GIT////////////////////////////////////////////////
+ git --version
 git version 2.29.2.windows.2
 
 Hp@LAPTOP-8U87UVS8 MINGW64 ~
@@ -15,14 +16,7 @@ $ git log
 fatal: not a git repository (or any of the parent directories): .git
 
 Hp@LAPTOP-8U87UVS8 MINGW64 ~
-$ mkdir GitPractice
 
-Hp@LAPTOP-8U87UVS8 MINGW64 ~
-$ cd
-Display all 92 possibilities? (y or n)
-
-Hp@LAPTOP-8U87UVS8 MINGW64 ~
-$ cd
 
 Hp@LAPTOP-8U87UVS8 MINGW64 ~
 $ cd gitPractice
@@ -158,4 +152,59 @@ Fast-forward
  create mode 100644 sachinBranch.txt
 
 Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (dev)
-$
+$ ^C
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (dev)
+$ git checkout master
+Switched to branch 'master'
+M       git commands.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git merge dev
+Updating f31f526..e512fc1
+Fast-forward
+ sachinBranch.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sachinBranch.txt
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git commands.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        mySecretKey
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git commands.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@LAPTOP-8U87UVS8 MINGW64 ~/gitPractice (master)
+///////////////////////////////////////////////////////git hub/////////////////////////////////////////////
