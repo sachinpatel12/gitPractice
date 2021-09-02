@@ -1,0 +1,16 @@
+ git --version
+  checking version
+
+git config --global user.name
+sachin
+
+
+git config --global user.email
+sachinpatelsdl@gmail.com
+
+ mkdir GitPractice
+
+ cd gitPractice
+
+ git init
+Initialized empty Git repository in C:/Users/Hp/GitPractice/.git/
