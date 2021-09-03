@@ -26,3 +26,9 @@ commands to push some code on master
 git add -A
 git commit -m "message"
 git push 
+
+
+when you want to add something on existing repo of github
+step 1: git remote add origin <link of route repo>
+step 2: git add <file name> after changes
+step 3: git commit -m 
